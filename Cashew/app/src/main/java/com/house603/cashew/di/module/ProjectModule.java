@@ -2,42 +2,14 @@ package com.house603.cashew.di.module;
 
 import android.app.Activity;
 
-import com.roxwin.widgetcontact.feature.callKeyboard.presenter.presenterImpl.CallKeyboardDailPresenterImpl;
-import com.roxwin.widgetcontact.feature.callKeyboard.presenter.view.CallKeyboardDailPresenter;
-import com.roxwin.widgetcontact.feature.circleMenu.presenter.presenterImpl.MenuCirclePresenterImpl;
-import com.roxwin.widgetcontact.feature.circleMenu.presenter.view.MenuCirclePresenter;
-import com.roxwin.widgetcontact.feature.contactProfileDisplay.presenter.presenterImpl.ContactProfileParesenterImp;
-import com.roxwin.widgetcontact.feature.contactProfileDisplay.presenter.view.ContactProfilePresenter;
-import com.roxwin.widgetcontact.feature.createContact.presenter.presenterImpl.CreateContactPresenterImpl;
-import com.roxwin.widgetcontact.feature.createContact.presenter.view.CreateContactPresenter;
-import com.roxwin.widgetcontact.feature.facebook.presenter.presenterImpl.FacebookFreindListPresenterImpl;
-import com.roxwin.widgetcontact.feature.facebook.presenter.view.FacebookFreindListPresenter;
-import com.roxwin.widgetcontact.feature.feedBack.feedBackTopic.Presenter.presenterImpl.FeedbackTopicPresenterImp;
-import com.roxwin.widgetcontact.feature.feedBack.feedBackTopic.Presenter.view.FeedBackTopicPresenter;
-import com.roxwin.widgetcontact.feature.feedBack.presenter.PresenterImpl.FeedBackPresenterImpl;
-import com.roxwin.widgetcontact.feature.feedBack.presenter.view.FeedBackPresenter;
-import com.roxwin.widgetcontact.feature.main.presenter.presenterImpl.MainActivityPresenterImpl;
-import com.roxwin.widgetcontact.feature.main.presenter.view.MainActivityPresenter;
-import com.roxwin.widgetcontact.feature.note.presenter.presenterImpl.NotePresenterImp;
-import com.roxwin.widgetcontact.feature.note.presenter.view.NotePresenter;
-import com.roxwin.widgetcontact.feature.reminder.presenter.presenterimpl.ReminderContactListPresenterImpl;
-import com.roxwin.widgetcontact.feature.reminder.presenter.view.ReminderContactListPresenter;
-import com.roxwin.widgetcontact.feature.reminderEditScreen.presenter.presenterImpl.ReminderEditScreenImpl;
-import com.roxwin.widgetcontact.feature.reminderEditScreen.presenter.view.ReminderEditScreenPresenter;
-import com.roxwin.widgetcontact.feature.reminderList.presenter.presenterImpl.AllReminderListImpl;
-import com.roxwin.widgetcontact.feature.reminderList.presenter.view.AllReminderListPresenter;
-import com.roxwin.widgetcontact.feature.showContactFrom.presenter.PresenterImpl.ShowContactFromPresenterImpl;
-import com.roxwin.widgetcontact.feature.showContactFrom.presenter.view.ShowContactPresenter;
-import com.roxwin.widgetcontact.feature.widget.service.appConfig.presenter.PresenterImp.AppConfigPresenterImpl;
-import com.roxwin.widgetcontact.feature.widget.service.appConfig.presenter.view.AppWidgetConfigPresenter;
-import com.roxwin.widgetcontact.feature.widgetPreview.presenter.PresenterImpl.WidgetPreviewPresenterImpl;
-import com.roxwin.widgetcontact.feature.widgetPreview.presenter.view.WidgetPreviewPresenter;
-import com.roxwin.widgetcontact.feature.widgetSettings.presenter.presenterImp.WidgetSettingsPresenterImpl;
-import com.roxwin.widgetcontact.feature.widgetSettings.presenter.view.WidgetSettingsPresenter;
-import com.roxwin.widgetcontact.internal.di.PerActivity;
+
+import com.house603.cashew.di.PerActivity;
+import com.house603.cashew.feature.main.presenter.presenterImpl.MainPresenterImpl;
+import com.house603.cashew.feature.main.presenter.view.MainPresenter;
 
 import dagger.Module;
 import dagger.Provides;
+
 
 /**
  * Created by Enny  on 29/11/2016.
@@ -56,10 +28,10 @@ public class ProjectModule {
         return this.activity;
     }
 
-//    @Provides
-//    WidgetSettingsPresenter provideWidgetSettingPresenter() {
-//        return new WidgetSettingsPresenterImpl();
-//    }
+    @Provides
+    MainPresenter provideMainPresenter() {
+        return new MainPresenterImpl();
+    }
 //
 //    @Provides
 //    AppWidgetConfigPresenter provideAppWidgetConfigPresenter(){

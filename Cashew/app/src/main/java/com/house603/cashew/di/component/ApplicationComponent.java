@@ -1,12 +1,16 @@
 package com.house603.cashew.di.component;
 
-import com.roxwin.widgetcontact.AppApplication;
-import com.roxwin.widgetcontact.base.BaseActionbarActivity;
-import com.roxwin.widgetcontact.internal.di.module.ApplicationModule;
+
+
+
+import com.house603.cashew.AppApplication;
+import com.house603.cashew.base.BaseActionbarActivity;
+import com.house603.cashew.di.module.ApplicationModule;
 
 import javax.inject.Singleton;
 
 import dagger.Component;
+
 
 /**
  * Created by Enny on 29/11/2016.

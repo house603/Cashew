@@ -1,28 +1,29 @@
-package com.house603.cashew.base;
+package com.house603.cashew;
+
 
 import android.app.Application;
 
 import com.house603.cashew.di.component.ApplicationComponent;
+
+import com.house603.cashew.di.component.DaggerApplicationComponent;
 import com.house603.cashew.di.module.ApplicationModule;
 
 /**
- * Created by Admin on 2/16/2017.
+ * Created by Enny on 29/11/2016.
  */
 
-public class AppApplication  extends Application {
+public class AppApplication
+        extends Application {
     private static AppApplication application;
     private ApplicationComponent mComponent;
-    @Inject
-    public ContactDAO mContactDao;
+
 
     @Override
     public void onCreate() {
         super.onCreate();
         application = this;
         initApplication();
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
-        // initImageLoader();
+       // initImageLoader();
     }
 
 
@@ -65,5 +66,5 @@ public class AppApplication  extends Application {
 //        ImageLoader.getInstance().init(config);
 //        RequestManager.init(this);
 //        ImageCacheManager.init(this);
-//    } {
+//    }
 }
