@@ -4,10 +4,14 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 
+
+import com.house603.cashew.AppApplication;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+
 
 /**
  * Created by Enny on 29/11/2016.
@@ -48,23 +52,23 @@ public class ApplicationModule {
 //        return new SqliteDAOFactory(mApp);
 //    }
 //
-    @Provides
-    @Singleton
-    ContactDAO provideContactDAO() {
-        return new ContactDAO(mApp, new SqliteDAOFactory(mApp).getConnection());
-    }
-
-    @Provides
-    @Singleton
-    SimContactDAO provideSimContactDAO() {
-        return new SimContactDAO(mApp, new SqliteDAOFactory(mApp).getConnection());
-    }
-
-    @Provides
-    @Singleton
-    ReminderDAO provideReminderDAO() {
-        return new ReminderDAO(mApp, new SqliteDAOFactory(mApp).getConnection());
-    }
+//    @Provides
+//    @Singleton
+//    ContactDAO provideContactDAO() {
+//        return new ContactDAO(mApp, new SqliteDAOFactory(mApp).getConnection());
+//    }
+//
+//    @Provides
+//    @Singleton
+//    SimContactDAO provideSimContactDAO() {
+//        return new SimContactDAO(mApp, new SqliteDAOFactory(mApp).getConnection());
+//    }
+//
+//    @Provides
+//    @Singleton
+//    ReminderDAO provideReminderDAO() {
+//        return new ReminderDAO(mApp, new SqliteDAOFactory(mApp).getConnection());
+//    }
 
 
 }
