@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Cashew</string>
+
+    <string name="ok">Ok</string>
+    <string name="permission_request">Permission necessary</string>
+    <string name="permission_request_read_external_storage">External storage permission is necessary</string>
+    <string name="disconnected">Cannot connect to server.</string>
+    <string name="unexpected_error">An unexpected error.</string>
 </resources>

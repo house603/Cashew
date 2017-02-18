@@ -1,4 +1,4 @@
-package atggroup.tk.iCool.activities;
+package com.house603.cashew.feature.main.view;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -8,17 +8,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.widget.ImageView;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.List;
-import atggroup.tk.iCool.R;
-import atggroup.tk.iCool.intf.ServerCallback;
-import atggroup.tk.iCool.manager.AuthManager;
-import atggroup.tk.iCool.manager.ServerManager;
-import atggroup.tk.iCool.manager.TopicManager;
-import atggroup.tk.iCool.model.Topic;
-import atggroup.tk.iCool.utils.HttpUtils;
-import atggroup.tk.iCool.utils.URLUtils;
+import com.house603.cashew.R;
+import com.house603.cashew.feature.main.Utils.HttpUtils;
+
+import com.house603.cashew.feature.main.view.MainActivity;
+import com.house603.cashew.feature.main.view.ServerCallback;
+
 
 /**
  * Created by admin on 0023, 2/23/2016.
@@ -28,10 +23,11 @@ public class LauncherActivity extends FragmentActivity implements ServerCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laucher);
+        setContentView(R.layout.activity_launcher);
         ImageView imageView = (ImageView)findViewById(R.id.logoImage);
-        imageView.setImageResource(R.mipmap.logo);
-        //Initialize data
+        //when the logo is ready this would work.
+        imageView.setImageResource(R.mipmap.ic_launcher);
+
         initData();
 
     }
@@ -46,13 +42,9 @@ public class LauncherActivity extends FragmentActivity implements ServerCallback
         }, new Runnable() {
             @Override
             public void run() { //Success
-                //Load topics
-                try {
-                    URL urlTopic = URLUtils.getTopicsURL(ctx);
-                    new ServerManager(urlTopic, ctx).start();
-                } catch (MalformedURLException e) {
-                    onUnexpectedError();
-                }
+            //There would be a try and catch error here to load from a URL of the data
+                //we will make use of the Unextected error code here.
+                gotoMain();
             }
         });
     }
@@ -66,15 +58,8 @@ public class LauncherActivity extends FragmentActivity implements ServerCallback
 
     @Override
     public void onCompleted(String json) {
-        TopicManager topicManager = TopicManager.getInstance();
-        topicManager.initialize(json);
-        List<Topic> lstTopics = topicManager.getTopics();
-        if (lstTopics == null || lstTopics.size() == 0) {
-            onDisconnect();
-        }
-        else {
+
             gotoMain();
-        }
     }
 
     @Override
@@ -97,8 +82,8 @@ public class LauncherActivity extends FragmentActivity implements ServerCallback
             }
         });
     }
-
-    private void onUnexpectedError() {
+    //This code would be implemented later on to detect any error that might occur later.
+   /* private void onUnexpectedError() {
         final LauncherActivity activity = this;
         runOnUiThread(new Runnable() {
             @Override
@@ -112,5 +97,5 @@ public class LauncherActivity extends FragmentActivity implements ServerCallback
                         }).setCancelable(false).create().show();
             }
         });
-    }
+    }*/
 }

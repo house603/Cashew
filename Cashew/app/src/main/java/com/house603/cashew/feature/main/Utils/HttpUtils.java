@@ -10,8 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import atggroup.tk.iCool.Constants;
-
 /**
  * Created by admin on 0023, 2/23/2016.
  */
