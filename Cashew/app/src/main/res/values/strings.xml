@@ -23,19 +23,22 @@
     <string name="powered">Powered By Yahoo! Finance</string>
 
     <string-array name="name">
-        <item >Indian Rupee</item>
-        <item >US Dollar</item>
-        <item >European Union Euro</item>
-        <item >Canadian Dollar</item>
-        <item >Australian Dollar</item>
-        <item >Singapore Dollar</item>
+        <item>Indian Rupee</item>
+        <item>US Dollar</item>
+        <item>European Union Euro</item>
+        <item>Canadian Dollar</item>
+        <item>Australian Dollar</item>
+        <item>Singapore Dollar</item>
     </string-array>
     <string-array name="value">
-        <item >INR</item>
-        <item >USD</item>
-        <item >EUR</item>
-        <item >CAD</item>
-        <item >AUD</item>
-        <item >SGD</item>
+        <item>INR</item>
+        <item>USD</item>
+        <item>EUR</item>
+        <item>CAD</item>
+        <item>AUD</item>
+        <item>SGD</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
