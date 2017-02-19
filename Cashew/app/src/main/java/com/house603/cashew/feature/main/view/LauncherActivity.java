@@ -1,6 +1,5 @@
-package atggroup.tk.iCool.activities;
+package com.house603.cashew.feature.main.view;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,17 +7,14 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.widget.ImageView;
 
+import com.house603.cashew.R;
+import com.house603.cashew.feature.main.Utils.HttpUtils;
+import com.house603.cashew.feature.main.view.MainActivity;
+import com.house603.cashew.feature.main.view.ServerCallback;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
-import atggroup.tk.iCool.R;
-import atggroup.tk.iCool.intf.ServerCallback;
-import atggroup.tk.iCool.manager.AuthManager;
-import atggroup.tk.iCool.manager.ServerManager;
-import atggroup.tk.iCool.manager.TopicManager;
-import atggroup.tk.iCool.model.Topic;
-import atggroup.tk.iCool.utils.HttpUtils;
-import atggroup.tk.iCool.utils.URLUtils;
 
 /**
  * Created by admin on 0023, 2/23/2016.
