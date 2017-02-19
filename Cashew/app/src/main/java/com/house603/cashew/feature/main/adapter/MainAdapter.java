@@ -32,17 +32,17 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     @Override
-    public MainAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
         View contactView;
         // Inflate the custom layout
         if (mType == CONVERTER) {
-            //contactView = inflater.inflate(R.layout.list_drag_contact_item, parent, false);
+            contactView = inflater.inflate(R.layout.content_converter, parent, false);
         } else if (mType == COMMODITY) {
-           // contactView = inflater.inflate(R.layout.list_drag_favourite_contact_item, parent, false);
+            contactView = inflater.inflate(R.layout.content_converter, parent, false);
         } else {
-           // contactView = inflater.inflate(R.layout.list_drag_recent_contact_item, parent, false);
+            contactView = inflater.inflate(R.layout.content_converter, parent, false);
         }
 
         // Return a new holder instance
@@ -50,7 +50,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MainAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
     }
 

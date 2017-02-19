@@ -22,7 +22,6 @@
     <string name="calculate">Calculate</string>
     <string name="powered">Powered By Yahoo! Finance</string>
 
-    <string name="app_name">CurrencyConverter</string>
     <string-array name="name">
         <item >Indian Rupee</item>
         <item >US Dollar</item>
