@@ -8,5 +8,7 @@
     <color name="click_button">#114dbc</color>
     <color name="white">#ffffff</color>
     <color name="gray">#DCDCDC</color>
+
+    <color name="item_black">#050505</color>
     <color name="dimgray">#696969</color>
 </resources>

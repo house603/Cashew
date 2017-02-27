@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".feature.activities.CommodityActivity" />
         <activity android:name=".feature.activities.CurrencyConverterActivity" />
-        <activity android:name=".feature.activities.CommentaryActivity"></activity>
+        <activity android:name=".feature.activities.CommentaryActivity" />
+        <activity android:name=".feature.countryList.view.CountryListActivity"></activity>
     </application>
 
 </manifest>

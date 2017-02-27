@@ -73,7 +73,7 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/cal"
             android:layout_marginTop="10dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

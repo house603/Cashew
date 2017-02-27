@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cnt_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/main_common_selector"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/cnt_contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/cnt_avatar"
+            android:text="New Text"
+            android:textColor="@color/item_black"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cnt_iso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cnt_contact_name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/cnt_avatar"
+            android:text="New Text"
+            android:textColor="@color/item_black"
+            android:textSize="@dimen/text_size_micro" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

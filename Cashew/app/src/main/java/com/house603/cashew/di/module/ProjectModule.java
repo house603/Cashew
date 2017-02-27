@@ -4,6 +4,8 @@ import android.app.Activity;
 
 
 import com.house603.cashew.di.PerActivity;
+import com.house603.cashew.feature.countryList.presenter.presenterImpl.CountryListPresenterImpl;
+import com.house603.cashew.feature.countryList.presenter.view.CountryListPresenter;
 import com.house603.cashew.feature.main.presenter.presenterImpl.MainPresenterImpl;
 import com.house603.cashew.feature.main.presenter.view.MainPresenter;
 
@@ -32,11 +34,11 @@ public class ProjectModule {
     MainPresenter provideMainPresenter() {
         return new MainPresenterImpl();
     }
-//
-//    @Provides
-//    AppWidgetConfigPresenter provideAppWidgetConfigPresenter(){
-//        return new AppConfigPresenterImpl();
-//    }
+
+    @Provides
+    CountryListPresenter provideCountryListPresenter(){
+        return new CountryListPresenterImpl();
+    }
 //
 //    @Provides
 //    ShowContactPresenter provideShowContactPresenter(){
