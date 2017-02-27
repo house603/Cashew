@@ -8,11 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.house603.cashew.R;
+
 import com.house603.cashew.base.BaseActionbarActivity;
 import com.house603.cashew.base.presenter.Presenter;
 
-import com.house603.cashew.di.component.DaggerProjectComponent;
+
 import com.house603.cashew.di.module.ProjectModule;
 import com.house603.cashew.feature.main.presenter.view.MainPresenter;
 import com.house603.cashew.feature.main.presenter.view.MainView;
