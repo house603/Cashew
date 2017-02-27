@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 
+import com.house603.cashew.R;
 import com.house603.cashew.base.BaseActionbarActivity;
 import com.house603.cashew.base.presenter.Presenter;
 
 
+import com.house603.cashew.di.component.DaggerProjectComponent;
 import com.house603.cashew.di.module.ProjectModule;
 import com.house603.cashew.feature.commentary.CommentaryFragment;
 import com.house603.cashew.feature.commodity.CommodityFragment;
