@@ -1,6 +1,5 @@
 package com.house603.cashew.feature.main.view;
 
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +9,12 @@ import android.widget.ImageView;
 
 import com.house603.cashew.R;
 import com.house603.cashew.feature.main.Utils.HttpUtils;
+import com.house603.cashew.feature.main.view.MainActivity;
+import com.house603.cashew.feature.main.view.ServerCallback;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
 
 import com.house603.cashew.feature.main.view.MainActivity;
 import com.house603.cashew.feature.main.view.ServerCallback;

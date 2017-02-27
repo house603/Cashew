@@ -6,4 +6,5 @@ package com.house603.cashew.feature.main.view;
 public interface ServerCallback {
     void onCompleted(String result);
     void onFailed(int code);
+
 }

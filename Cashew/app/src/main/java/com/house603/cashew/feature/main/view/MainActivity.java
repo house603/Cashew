@@ -1,12 +1,11 @@
 package com.house603.cashew.feature.main.view;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
+import android.net.Uri;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
+import android.support.v7.widget.Toolbar;
 
 
 import com.house603.cashew.base.BaseActionbarActivity;
@@ -14,14 +13,22 @@ import com.house603.cashew.base.presenter.Presenter;
 
 
 import com.house603.cashew.di.module.ProjectModule;
+import com.house603.cashew.feature.commentary.CommentaryFragment;
+import com.house603.cashew.feature.commodity.CommodityFragment;
+import com.house603.cashew.feature.currency.CurencyConverterFragment;
+import com.house603.cashew.feature.main.adapter.PageAdapter;
 import com.house603.cashew.feature.main.presenter.view.MainPresenter;
 import com.house603.cashew.feature.main.presenter.view.MainView;
 
 import javax.inject.Inject;
 
-public class MainActivity extends BaseActionbarActivity implements MainView {
+public class MainActivity extends BaseActionbarActivity implements MainView, CurencyConverterFragment.OnFragmentInteractionListener,
+        CommentaryFragment.OnFragmentInteractionListener,CommodityFragment.OnFragmentInteractionListener {
 @Inject
     MainPresenter mPresenter;
+    private ViewPager mViewPager;
+    private TabLayout tabLayout;
+
     @Override
     public void initView() {
 
@@ -41,48 +48,16 @@ public class MainActivity extends BaseActionbarActivity implements MainView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initTabar();
         initView();
         injectInjector();
-        ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
-        viewPager.setAdapter(new CustomPagerAdapter(this));
-        viewPager.setOffscreenPageLimit(3);
+        initActionbar();
+
+
+
     }
-    public class CustomPagerAdapter extends PagerAdapter
-    {
-        private Context mContext;
-        public CustomPagerAdapter(Context context)
-        {
-            mContext = context;
-        }
 
-        @Override
-        public Object instantiateItem(ViewGroup collection, int position) {
-
-            int resId = 0;
-            switch (position) {
-                case 0:
-                    resId = R.id.page_one; //pass id of that view to return, Views will be added in XML.
-                    break;
-                case 1:
-                    resId = R.id.page_two;
-                    break;
-                case 2:
-                    resId = R.id.page_three;
-                    break;
-            }
-            return findViewById(resId); // return selected view.
-        }
-
-        @Override
-        public int getCount() {
-            return 3;// CustomPagerEnum.values().length;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view==object;
-        }
-    }
 
     @Override
     protected void injectInjector() {
@@ -90,6 +65,40 @@ public class MainActivity extends BaseActionbarActivity implements MainView {
         mPresenter.setView(this);
 
     }
+    private void initTabar() {
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        mViewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),getApplicationContext()));
+        tabLayout.setupWithViewPager(mViewPager);
+
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                mViewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                mViewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                mViewPager.setCurrentItem(tab.getPosition());
+            }
+        });
+    }
+
+    private void initActionbar() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        setTitle(R.string.app_name);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+    }
+
+
+
 
     @Override
     public void showLineLoading() {
@@ -109,5 +118,10 @@ public class MainActivity extends BaseActionbarActivity implements MainView {
     @Override
     public Context getContext() {
         return this;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }

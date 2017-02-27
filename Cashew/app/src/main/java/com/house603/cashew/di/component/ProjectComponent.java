@@ -4,6 +4,7 @@ package com.house603.cashew.di.component;
 
 import com.house603.cashew.di.PerActivity;
 import com.house603.cashew.di.module.ProjectModule;
+import com.house603.cashew.feature.countryList.view.CountryListActivity;
 import com.house603.cashew.feature.main.view.MainActivity;
 
 import dagger.Component;
@@ -15,5 +16,6 @@ import dagger.Component;
 @Component(modules = ProjectModule.class)
 public interface ProjectComponent {
     void inject(MainActivity activity);
+    void inject (CountryListActivity activity);
 
 }
