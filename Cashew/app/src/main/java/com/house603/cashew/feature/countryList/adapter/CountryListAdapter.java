@@ -39,11 +39,17 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
     }
 
     @Override
-    public void onBindViewHolder(CountryListAdapter.ViewHolder holder, int position) {
-        CurrencyModel model = mCurrencyModelList.get(position);
+    public void onBindViewHolder(CountryListAdapter.ViewHolder holder, final int position) {
+        final CurrencyModel model = mCurrencyModelList.get(position);
         holder.mImg_country.setImageResource(model.getFlag());
         holder.txt_countryName.setText(model.getmCountryName());
         holder.txt_iso.setText(model.getmCurrencyiso());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mClickListener.ItemClick(model,position);
+            }
+        });
 
     }
 

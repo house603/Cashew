@@ -1,5 +1,7 @@
 package com.house603.cashew.feature.main.presenter.view;
 
+import android.app.Activity;
+
 import com.house603.cashew.base.presenter.LoadDataView;
 
 /**
@@ -7,4 +9,5 @@ import com.house603.cashew.base.presenter.LoadDataView;
  */
 
 public interface MainView extends LoadDataView {
+    Activity getActivity();
 }

@@ -7,5 +7,5 @@ import com.house603.cashew.model.CurrencyModel;
  */
 
 public interface CountryListAdapterListener {
-    void ItemClick(CurrencyModel model);
+    void ItemClick(CurrencyModel model, int p);
 }
