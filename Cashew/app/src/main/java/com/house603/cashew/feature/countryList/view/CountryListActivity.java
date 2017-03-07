@@ -107,8 +107,37 @@ public class CountryListActivity extends BaseActionbarActivity implements Countr
     };
 
     String[] currency = new String[]{
-            "Rupee", "Dollar", "Renminbi", "Rupiah",
-            "Yen", "Dollar", "Ruble", "Won"
+            "AFN", "ALL", "DZD", "USD", "EUR", "AOA", "XCD",
+            "XCD", "ARS", "AMD", "AWG", "AUD", "EUR", "AZM", "BSD",
+            "BHD", "BDT", "BBD", "BYR", "EUR", "BZD", "XOF", "BMD",
+            "BTN", "BOB", "BAM", "BWP", "BRL", "USD",
+            "BND", "BGN", "XOF", "BIF", "KHR", "XAF", "CAD", "CVE",
+            "KYD", "XAF", "XAF", "CLP", "CNY", "AUD", "AUD",
+            "COP", "KMF", "XAF", "NZD", "CRC", "XOF", "HRK", "CUP",
+            "CYP    ", "CZK", "CDF", "DKK", "DJF", "XCD", "DOP",
+            "USD", "EGP", "USD", "XAF", "ERN", "EEK", "ETB", "DKK",
+            "FKP", "FJD", "EUR", "MKD", "EUR", "EUR", "XPF",
+            "XAF", "GMD", "GEL", "EUR", "GHC", "GIP", "EUR", "DKK",
+            "XCD", "EUR", "USD", "GTQ", "GNF", "XOF", "GYD", "HTG",
+            "HNL", "HKD", "HUF", "ISK", "INR", "IDR", "IRR", "IQD",
+            "EUR", "ILS", "EUR", "JMD", "JPY", "JOD", "KZT", "KES",
+            "AUD", "KWD", "KGS", "LAK", "LVL", "LBP", "LSL", "LRD",
+            "LYD", "CHF", "LTL", "EUR", "MOP", "MGF", "MWK", "MYR",
+            "MVR", "XOF", "MTL", "USD", "EUR", "MRO", "MUR", "EUR",
+            "MXN", "USD", "MDL", "EUR", "MNT", "XCD", "MAD", "MZM",
+            "MMK", "NAD", "AUD", "NPR", "EUR", "ANG", "XPF", "NZD",
+            "NIO", "XOF", "NGN", "NZD", "AUD", "KPW", "USD",
+            "NOK", "OMR", "PKR", "USD", "PAB", "PGK", "PYG",
+            "PEN", "PHP", "NZD", "PLN", "EUR", "USD", "QAR",
+            "EUR", "ROL", "RUB", "RWF", "SHP", "XCD", "XCD",
+            "EUR", "XCD", "WST", "EUR", "STD", "SAR", "XOF",
+            "YUM", "SCR", "SLL", "SGD", "SKK", "SIT", "SBD", "SOS",
+            "ZAR", "", "KRW", "EUR", "LKR", "SDD", "SRG", "NOK",
+            "SZL", "SEK", "CHF", "SYP", "TWD", "TJS", "TZS", "THB",
+            "USD", "XOF", "NZD", "TOP", "TTD", "TND", "TRL", "TMM",
+            "USD", "AUD", "UGX", "UAH", "AED", "GBP", "USD", "UYU",
+            "USD", "UZS", "VUV", "EUR", "VEB", "VND", "XPF", "MAD",
+            "YER", "ZMK", "ZWD"
     };
     private LinearLayoutManager mLayoutManager;
     CountryListAdapter mAdapter;
