@@ -3,22 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
+    android:layout_margin="2dp"
     android:clickable="true"
     android:focusable="true"
-    android:foreground="@drawable/item_common_selector"
+
     android:padding="5dp"
     app:cardCornerRadius="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_common_selector">
 
         <ImageView
             android:id="@+id/cnt_avatar"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/main_common_selector"
             android:src="@mipmap/ic_launcher" />
 
         <TextView

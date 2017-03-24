@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
+    android:background="@color/tranRed"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.house603.cashew.feature.countryList.view.CountryListActivity">
 <LinearLayout
@@ -24,7 +25,7 @@
             android:textColor="@color/item_black"
             android:text="@string/info_chose"
             android:textStyle="bold"
-            android:textSize="25sp"/>
+            android:textSize="20sp"/>
         <android.support.v7.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"

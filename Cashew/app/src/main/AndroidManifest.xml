@@ -22,7 +22,12 @@
         <activity android:name=".feature.activities.CommodityActivity" />
         <activity android:name=".feature.activities.CurrencyConverterActivity" />
         <activity android:name=".feature.activities.CommentaryActivity" />
-        <activity android:name=".feature.countryList.view.CountryListActivity"></activity>
+        <activity android:name=".feature.countryList.view.CountryListActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.Transparent" >
+
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.house603.cashew.feature.countryList.view;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -33,7 +34,7 @@ public class CountryListActivity extends BaseActionbarActivity implements Countr
     CurrencyModel mCurrencymodel;
 
     String[] countryNames = new String[]{
-            "India", "Australia", "China", "Indonesia", "Japan", "Newzealand", "Russia", "South Korea"
+            "Nigeria", "Vietnam", "China", "Indonesia", "Japan", "Newzealand", "Russia", "South Korea"
     };
     int[] flagId = new int[]{
             R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,
@@ -42,11 +43,11 @@ public class CountryListActivity extends BaseActionbarActivity implements Countr
 //            R.drawable.flag_japan, R.drawable.flag_newzealand, R.drawable.flag_russia, R.drawable.flag_southkorea
     };
     String[] capital = new String[]{
-            "New Delhi", "Sydney", "Beijing", "Jakarta", "Tokyo", "Wellington", "Moscow", "Seoul"
+            "Nigeria", "Vietnam", "Beijing", "Jakarta", "Tokyo", "Wellington", "Moscow", "Seoul"
     };
 
     String[] currency = new String[]{
-            "Rupee", "Dollar", "Renminbi", "Rupiah",
+            "NGN", "VND", "Renminbi", "Rupiah",
             "Yen", "Dollar", "Ruble", "Won"
     };
     private LinearLayoutManager mLayoutManager;
@@ -86,6 +87,8 @@ public class CountryListActivity extends BaseActionbarActivity implements Countr
     protected void injectInjector() {
         DaggerProjectComponent.builder().projectModule(new ProjectModule(this)).build().inject(this);
         mPresenter.setView(this);
+//        ActionBar actionBar = getActionBar();
+//        actionBar.hide();
         Intent intent = getIntent();
         if (intent.getStringExtra("flag1") != null) {
             id_flag1 = intent.getIntExtra("id", 0);

@@ -46,4 +46,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="info_chose">Choose a Country</string>
+    <string name="CALCULATE">CALCULATE</string>
+    <string name="USD">USD</string>
+    <string name="NGN">NGN</string>
+    <string name="commentaries">Commentary</string>
+    <string name="about_us">About Us</string>
 </resources>

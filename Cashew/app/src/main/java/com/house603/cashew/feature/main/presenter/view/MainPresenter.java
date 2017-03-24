@@ -9,5 +9,6 @@ import com.house603.cashew.base.presenter.Presenter;
 public interface MainPresenter extends Presenter<MainView> {
     void OpenCountryList();
     void OpenCountryList2();
+    String getJson(String url);
 
 }

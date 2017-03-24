@@ -9,6 +9,7 @@ import java.io.Serializable;
 public class CurrencyModel implements Serializable {
     private String mCountryName, mCurrencyiso;
     private int flag;
+    private double rate;
 
     public String getmCountryName() {
         return mCountryName;
@@ -32,5 +33,8 @@ public class CurrencyModel implements Serializable {
 
     public void setFlag(int flag) {
         this.flag = flag;
+    }
+    public double getRate() {
+        return rate;
     }
 }

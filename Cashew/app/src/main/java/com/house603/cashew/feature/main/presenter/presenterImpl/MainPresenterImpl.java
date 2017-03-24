@@ -9,12 +9,19 @@ import com.house603.cashew.feature.main.presenter.view.MainPresenter;
 import com.house603.cashew.feature.main.presenter.view.MainView;
 import com.house603.cashew.feature.main.view.MainActivity;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+
+
 /**
  * Created by Admin on 2/16/2017.
  */
 
 public class MainPresenterImpl implements MainPresenter {
     MainView mView;
+
     @Override
     public void resume() {
 
@@ -38,7 +45,7 @@ public class MainPresenterImpl implements MainPresenter {
 
     @Override
     public void OpenCountryList() {
-        Intent intent=new Intent(mView.getContext(),CountryListActivity.class);
+        Intent intent = new Intent(mView.getContext(), CountryListActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("flag1", "flag1Country");
         bundle.putInt("id", 5);
@@ -50,11 +57,30 @@ public class MainPresenterImpl implements MainPresenter {
 
     @Override
     public void OpenCountryList2() {
-        Intent intent=new Intent(mView.getContext(),CountryListActivity.class);
+        Intent intent = new Intent(mView.getContext(), CountryListActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("flag2", "flag2Country");
         bundle.putInt("id", 6);
         intent.putExtras(bundle);
         mView.getActivity().startActivityForResult(intent, 3);
+    }
+
+    @Override
+    public String getJson(String url) {
+
+//        StringBuilder build = new StringBuilder();
+//        HttpClient client = new DefaultHttpClient();
+//        HttpGet httpGet = new HttpGet(url);
+//        HttpResponse response = client.execute(httpGet);
+//        HttpEntity entity = response.getEntity();
+//        InputStream content = entity.getContent();
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+//        String con;
+//        while ((con = reader.readLine()) != null) {
+//            build.append(con);
+//        }
+//        return build.toString();
+//    }
+        return url;
     }
 }
