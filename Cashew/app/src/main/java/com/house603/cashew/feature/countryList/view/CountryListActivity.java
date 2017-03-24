@@ -67,8 +67,40 @@ public class CountryListActivity extends BaseActionbarActivity implements Countr
 
     };
     int[] flagId = new int[]{
-            R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,
+            R.mipmap.afghanistan, R.mipmap.albania, R.mipmap.algeria, R.mipmap.american Samoa, R.mipmap.andorra, R.mipmap.angola, R.mipmap.anguilla,
+            R.mipmap.antigua and Barbuda, R.mipmap.argentina, R.mipmap.armenia, R.mipmap.aruba, R.mipmap.australia, R.mipmap.austria, R.mipmap.azerbaijan, R.mipmap.bahamas,
+            R.mipmap.bahrain, R.mipmap.bangladesh, R.mipmap.barbados, R.mipmap.belarus, R.mipmap.belgium, R.mipmap.belize, R.mipmap.benin, R.mipmap.bermuda,
+            R.mipmap.bhutan, R.mipmap.bolivia, R.mipmap.bosnia, R.mipmap.botswana, R.mipmap.brazil, R.mipmap.british_virgin_islands,
+            R.mipmap.brunei, R.mipmap.bulgaria, R.mipmap.burkina_faso, R.mipmap.burundi, R.mipmap.cambodia, R.mipmap.cameroon, R.mipmap.canada, R.mipmap.cape_verde,
+            R.mipmap.cayman_islands, R.mipmap.central_african_republic, R.mipmap.chad, R.mipmap.chile, R.mipmap.china, R.mipmap.christmas_island, R.mipmap.cocos_islands,
+            R.mipmap.colombia, R.mipmap.comoros, R.mipmap.congo, R.mipmap.cook_islands, R.mipmap.costa_rica, R.mipmap.côte d'ivoire, R.mipmap.croatia, R.mipmap.cuba,
+            R.mipmap.cyprus, R.mipmap.czech_republic, R.mipmap.democratic_republic_congo, R.mipmap.denmark, R.mipmap.djibouti, R.mipmap.dominica, R.mipmap.dominican_republic,
+            R.mipmap.ecuador, R.mipmap.egypt, R.mipmap.el_salvador, R.mipmap.equatorial_guinea, R.mipmap.eritrea, R.mipmap.estonia, R.mipmap.ethiopia, R.mipmap.faeroe_islands,
+            R.mipmap.falkland_islands, R.mipmap.fiji, R.mipmap.finland, R.mipmap.france, R.mipmap.french_guiana, R.mipmap.french_polynesia,
+            R.mipmap.gabon, R.mipmap.gambia, R.mipmap.georgia, R.mipmap.germany, R.mipmap.ghana, R.mipmap.gibraltar, R.mipmap.greece, R.mipmap.greenland,
+            R.mipmap.grenada, R.mipmap.guadeloupe, R.mipmap.guam, R.mipmap.guatemala, R.mipmap.guinea, R.mipmap.guinea_bissau, R.mipmap.guyana, R.mipmap.haiti,
+            R.mipmap.honduras, R.mipmap.hong_kong, R.mipmap.hungary, R.mipmap.iceland, R.mipmap.india, R.mipmap.indonesia, R.mipmap.iran, R.mipmap.iraq,
+            R.mipmap.ireland, R.mipmap.israel, R.mipmap.italy, R.mipmap.jamaica, R.mipmap.japan, R.mipmap.jordan, R.mipmap.kazakhstan, R.mipmap.kenya,
+            R.mipmap.kiribati, R.mipmap.kuwait, R.mipmap.kyrgyzstan, R.mipmap.laos, R.mipmap.latvia, R.mipmap.lebanon, R.mipmap.lesotho, R.mipmap.liberia,
+            R.mipmap.libya, R.mipmap.liechtenstein, R.mipmap.lithuania, R.mipmap.luxembourg, R.mipmap.macau, R.mipmap.madagascar, R.mipmap.malawi, R.mipmap.malaysia,
+            R.mipmap.maldives, R.mipmap.mali, R.mipmap.malta, R.mipmap.marshall_islands, R.mipmap.martinique, R.mipmap.mauritania, R.mipmap.mauritius, R.mipmap.mayotte,
+            R.mipmap.mexico, R.mipmap.micronesia, R.mipmap.moldova, R.mipmap.monaco, R.mipmap.mongolia, R.mipmap.montserrat, R.mipmap.morocco, R.mipmap.mozambique,
+            R.mipmap.myanmar, R.mipmap.mamibia, R.mipmap.nauru, R.mipmap.nepal, R.mipmap.netherlands, R.mipmap.netherlands_antilles, R.mipmap.new_caledonia, R.mipmap.new_zealand,
+            R.mipmap.nicaragua, R.mipmap.niger, R.mipmap.nigeria, R.mipmap.niue, R.mipmap.norfolk_island, R.mipmap.north_korea, R.mipmap.northern_marianas,
+            R.mipmap.norway, R.mipmap.oman, R.mipmap.pakistan, R.mipmap.palau, R.mipmap.panama, R.mipmap.papua_new_guinea, R.mipmap.paraguay,
+            R.mipmap.peru, R.mipmap.philippines, R.mipmap.pitcairn_islands, R.mipmap.poland, R.mipmap.portugal, R.mipmap.puerto_rico, R.mipmap.qatar,
+            R.mipmap.réunion, R.mipmap.romania, R.mipmap.russia, R.mipmap.rwanda, R.mipmap.saint_helena, R.mipmap.saint_kitts_and_nevis, R.mipmap.saint_lucia,
+            R.mipmap.saint_pierre_and_miquelon, R.mipmap.saint_vincent_and_the_grenadines, R.mipmap.samoa, R.mipmap.san_marino, R.mipmap.são_tomé_and_príncipe, R.mipmap.saudi_arabia, R.mipmap.senegal,
+            R.mipmap.serbia_and_montenegro, R.mipmap.seychelles, R.mipmap.sierra_leone, R.mipmap.singapore, R.mipmap.slovakia, R.mipmap.slovenia, R.mipmap.solomon_islands, R.mipmap.somalia,
+            R.mipmap.south_africa, R.mipmap.south_georgia, R.mipmap.south_korea, R.mipmap.spain, R.mipmap.sri_lanka, R.mipmap.sudan, R.mipmap.suriname, R.mipmap.svalbard,
+            R.mipmap.swaziland, R.mipmap.sweden, R.mipmap.switzerland, R.mipmap.syria, R.mipmap.taiwan, R.mipmap.tajikistan, R.mipmap.tanzania, R.mipmap.thailand,
+            R.mipmap.timor_leste, R.mipmap.togo, R.mipmap.tokelau, R.mipmap.tonga, R.mipmap.trinidad_and_tobago, R.mipmap.tunisia, R.mipmap.turkey, R.mipmap.turkmenistan,
+            R.mipmap.turks_and_caicos_islands, R.mipmap.tuvalu, R.mipmap.uganda, R.mipmap.ukraine, R.mipmap.united_arab_emirates, R.mipmap.united_kingdom, R.mipmap.united_states, R.mipmap.uruguay,
+            R.mipmap.uzbekistan, R.mipmap.vanuatu, R.mipmap.vatican_ city, R.mipmap.venezuela, R.mipmap.vietnam, R.mipmap.wallis_and_futuna, R.mipmap.western_sahara,
+            R.mipmap.yemen, R.mipmap.zambia, R.mipmap.zimbabwe
+
+//            R.mipmap.afghanistan,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,
+//            R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,
 //            R.mipmap.flag_india, R.drawable.flag_australia, R.drawable.flag_china, R.drawable.flag_indonesia,
 //            R.drawable.flag_japan, R.drawable.flag_newzealand, R.drawable.flag_russia, R.drawable.flag_southkorea
     };
